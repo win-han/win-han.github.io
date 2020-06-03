@@ -1,0 +1,70 @@
+$deep-teal: #002F2F;
+$loulou: #2e0927;
+$edward: #AAAFAF;
+$cream: #FFFFCB;
+$chateau-green: #3EAE68;
+$red: red;
+$black: rgb(20, 20, 20);
+$white: rgb(255, 255, 255);
+$orange: #FF5714;
+$gold: #CCA43B;
+$platinum: #E5E5E5;
+//
+
+$bg: $black;
+$text: $edward;
+$hover: $chateau-green;
+$h2: $white;
+// $hover: $gold;
+//
+
+$input-bg: $bg;
+$input-text: $text;
+
+$section-left: $bg;
+$section-right: $chateau-green;
+$section-left-title: darken($section-left, 0.4%);
+$section-right-title: $hover;
+
+$intro-bg: $bg;
+$intro-text: $text;
+$intro-border: $text;
+$intro-title: $h2;
+$intro-arrow: $hover;
+
+$menu-bg: $h2;
+$menu-hover: $text;
+$menu-active: $hover;
+$menu-text: $bg;
+$menu-active-text: $bg;
+
+$proj-bg: $bg;
+$proj-text: $text;
+$proj-border: rgba($proj-text, .5);
+$proj-overlay: rgba($proj-bg, .1);
+$proj-link: $hover;
+$proj-title: $h2;
+
+$skill-col: $hover;
+$skill-shadow: $red;
+$skill-title: $h2;
+$skill-bg: $bg;
+
+$contact-bg: $bg;
+$contact-title: $h2;
+$contact-text: $text;
+$contact-hover: $hover;
+$contact-border: $text;
+
+$icon-hover: $hover;
+$icon-fill: $hover;
+$icon-text: $text;
+
+$skew: 20;
+
+$mobile: 768px;
+$minHeight: 600px;
+
+// $font1: 'Wire One';
+$font1: 'Raleway';
+$font2: 'Raleway';

@@ -1,0 +1,126 @@
+.logo{
+	position: absolute;
+	z-index: 5;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: $bg;
+
+	&_wrapper{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	svg{
+		overflow: visible;
+		stroke-opacity: 0.3;
+		width: 100px;
+		height: 100px;
+		fill: $white;
+		stroke: $white;
+	}
+
+	path{
+		opacity: 0;
+	}
+
+	.black{
+		fill-opacity: 0.9;
+	}
+
+	.white{
+		fill-opacity: 0.03;
+		stroke-opacity: 0;
+	}
+
+	.gray-dark{
+		fill-opacity: 0.3;
+		stroke-opacity: 0;
+	}
+
+	.gray-light{
+		fill-opacity: 0.1;
+		stroke-opacity: 0;
+	}
+
+	svg, svg * {
+		pointer-events: none;
+	}
+
+	&.main{
+		background: transparent;
+
+		.logo_wrapper{
+			margin-left: -230px;
+
+			&:hover{
+				padding: 0 50%;
+			}
+		}
+
+		svg{
+			width: 280px;
+			height: 280px;
+			fill: url(.#g443);
+			stroke: url(.#g443);
+			// filter: url(.#polycleaner);
+		}
+	}
+
+	&.corner{
+		width: auto;
+		height: auto;
+		cursor: pointer;
+		position: fixed;
+
+		.logo_wrapper{
+			top: 20px;
+			left: 20px;
+			transform: none;
+			margin: 0;
+		}
+
+		svg{
+			width: 80px;
+			height: 80px;
+			fill: $white;
+			stroke: $white;
+			stroke-opacity: 0.9;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.logo.main:not(.corner){
+
+		svg{
+			width: 250px;
+			height: 250px;
+		}
+	}
+}
+
+@media screen and (max-width: 900px){
+	.logo.main{
+
+		.logo_wrapper{
+			margin-left: 0;
+			margin-top: -100px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px){
+	.logo.main:not(.corner){
+
+		svg{
+			width: 200px;
+			height: 200px;
+		}
+	}
+}
+
+_::-webkit-:not(:root:root), .logo.main:not(.corner) svg { stroke: #B1AFB1; }

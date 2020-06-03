@@ -1,0 +1,172 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		title Catico
+		include favicon.html
+		link(rel="stylesheet", type="text/css", href="style.css")
+	body
+		include vectors.svg
+		main.main
+			.logo
+				.logo_wrapper
+					include logo.svg
+			include menu.pug
+			section.section.intro#intro
+				.intro_text
+					h1.intro_title Catico
+					.intro_subtitle creative web development
+				a(href="#projects").intro_link
+					.intro_arrows
+						.intro_arrow
+							svg
+								use(xlink:href="#arrow")
+						.intro_arrow
+							svg
+								use(xlink:href="#arrow")
+			section.section.proj#projects
+				#proj1.proj_el
+					.proj_wrap
+						img.proj_img(src="img/yoga.png")
+						.proj_overlay
+							.proj_title Ashtanga Yoga
+							p.proj_descr
+								| Mobile app guide to ashtanga yoga series and asanas.
+							.proj_tags #ReactNative #Expo
+							.proj_links
+								a.proj_link.github(href='https://github.com/cat-ico/yoga', target='_blank')
+									svg
+										use(xlink:href='#github')
+								a.proj_link.play_badge(href='https://play.google.com/store/apps/details?id=com.caticoapps.ashtangayoga', target='_blank')
+									include google-play-badge.svg
+				#proj2.proj_el
+					.proj_wrap
+						img.proj_img(src="img/hey.png")
+						.proj_overlay
+							.proj_title Hey
+							p.proj_descr
+								| Social mobile app guide for meeting people close to you.
+							.proj_tags #ReactNative #Expo #MobX #Firebase #Sentry
+							.proj_links
+								a.proj_link.github(href='https://github.com/cat-ico/hey', target='_blank')
+									svg
+										use(xlink:href='#github')
+								a.proj_link.play_badge(href='https://play.google.com/store/apps/details?id=com.caticoapps.hey', target='_blank')
+									include google-play-badge.svg
+				#proj3.proj_el
+					.proj_wrap
+						img.proj_img(src="img/beauty.png")
+						.proj_overlay
+							.proj_title Beauty page template
+							p.proj_descr
+								| Front-end web templete for beauty salon.
+							.proj_tags #JavaScript #ES6 #Pug #Sass #Gulp #GreenSock #ScrollMagic
+							.proj_links
+								a.proj_link.github(href='https://github.com/cat-ico/beauty_template', target='_blank')
+									svg
+										use(xlink:href='#github')
+				#proj4.proj_el
+					.proj_wrap
+						img.proj_img(src="img/votex.png")
+						.proj_overlay
+							.proj_title Votex
+							p.proj_descr
+								| NodeJS app for poll creation.
+							.proj_tags #NodeJS #Pug #CSS #ChartJS #Heroku #MongoDB 
+							.proj_links
+								a.proj_link.github(href='https://github.com/cat-ico/votingapp', target='_blank')
+									svg
+										use(xlink:href='#github')
+								a.proj_link(href='https://votexapp.herokuapp.com/', target='_blank')
+									svg
+										use(xlink:href='#link')
+											
+			section.section.skills#skills
+				h2.skills_title About me
+				i.skills_icon.devicon-atom-plain-wordmark.larger
+				i.skills_icon.devicon-babel-plain
+				i.skills_icon.devicon-html5-plain-wordmark
+				p.skills_about Web and app developer currently based in Prague, Czech Republic. I have passion for design and animation and love creating websites with great visual experience.
+				i.skills_icon.devicon-css3-plain-wordmark
+				i.skills_icon.devicon-sass-plain
+				i.skills_icon.devicon-less-plain-wordmark
+				i.skills_icon.devicon-bootstrap-plain-wordmark
+				i.skills_icon.devicon-javascript-plain.smaller
+				i.skills_icon.devicon-react-plain-wordmark
+				i.skills_icon.devicon-git-plain-wordmark
+				i.skills_icon.devicon-github-plain-wordmark
+				i.skills_icon.devicon-bitbucket-plain-wordmark
+				i.skills_icon.devicon-gulp-plain
+				i.skills_icon.devicon-grunt-plain-wordmark
+				i.skills_icon.devicon-nodejs-plain-wordmark.larger
+				i.skills_icon.devicon-ruby-plain-wordmark
+				i.skills_icon.devicon-rails-plain-wordmark
+				i.skills_icon.devicon-heroku-plain-wordmark
+				i.skills_icon.devicon-mongodb-plain-wordmark
+				i.skills_icon.devicon-mysql-plain-wordmark
+				i.skills_icon.devicon-webpack-plain-wordmark.larger
+				i.skills_icon.devicon-jquery-plain-wordmark
+				i.skills_icon
+					.skills_iconsvg
+						svg
+							use(xlink:href="#greensock")
+			section.section.contact#contact
+				h2.contact_title Get in touch
+				.contact_left
+					.contact_icons
+						.icons
+							a.icons_el(href="https://github.com/cat-ico", target="_blank")
+								.icons_icon
+									svg
+										use(xlink:href="#github")
+								h3.icons_title Checkout my code at 
+									span Github
+							a.icons_el(href="https://play.google.com/store/apps/developer?id=Catico+Apps", target="_blank")
+								.icons_icon
+									svg
+										use(xlink:href="#playstore")
+								h3.icons_title See my apps at 
+									span Play Store
+							a.icons_el(href="mailto:caticoapps@gmail.com")
+								.icons_icon
+									svg
+										use(xlink:href="#email")
+								h3.icons_title Say hi at 
+									span caticoapps@gmail.com
+							.icons_el#hire
+								.icons_icon
+									svg
+										use(xlink:href="#happy")
+								h3.icons_title Hire 
+									span me
+				.contact_right
+					.contact_form
+						.contact_overlay Thank you! I'll be in touch soon.
+						form#contact_form(autocomplete="off", novalidate, action="https://formspree.io/caticoapps@gmail.com", method="POST")
+							input(type="hidden" name="_next" value="#contact_form")
+							input(type="text" name="_gotcha" style="display:none")
+							span.contact_input
+								input.contact_field#input-1(type="text", name="name", required)
+								.contact_error(data-name="name") Please provide your name
+								label.contact_label(for="input-1")
+									svg.contact_border
+										use(xlink:href="#input")
+									span.contact_labelName Name
+							span.contact_input
+								input.contact_field#input-2(type="email", name="_reply_to", pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required)
+								.contact_error(data-name="_reply_to") Please provide a valid email address
+								label.contact_label(for="input-2")
+									svg.contact_border
+										use(xlink:href="#input")
+									span.contact_labelName Email
+							span.contact_input
+								textarea.contact_field.contact_msg#input-3(name="message", required)
+								.contact_error(data-name="message") Please provide a message
+								label.contact_label(for="input-3")
+									svg.contact_border.msg
+										use(xlink:href="#textarea")
+									span.contact_labelName Message
+							button.contact_submit(type="submit", value="Send") 
+								span Send
+		script(src="script.js")
